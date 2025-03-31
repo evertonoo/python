@@ -1,4 +1,4 @@
-# python
+# Python
 Olá me chamo Everton Vieira
 
 Em 2025 iniciei meus estudos no de Análise e Desenvolvimento de Sistemas no IFSC Campus Canoinhas - SC,
