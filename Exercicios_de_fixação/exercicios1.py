@@ -44,7 +44,7 @@ def adivinha():
     n2 = 0
     while n1 != n2:
         n2 = int(input("Escolha um numero de 1 a 50: "))
-        
+
         if n2 < 0 or n2 > 50:
             print(f"Por favor {n2} não esta entre os numeros que te pedi, por favor digite novamente: ")
             n1 = int(input())
@@ -54,10 +54,19 @@ def adivinha():
             print(f"O numero {n2} é maior que meu numero:")
         else:
             print(f"Parabens meu numero era {n1} igual o seu {n2}")
-adivinha()
+# adivinha()
 
 # 7. Fatorial de um número
 # Crie uma função que receba um número n e retorne o fatorial de n.
+
+def fatorial(n1):
+        cn1 = n1
+        resultado = 1
+        while cn1 > 0:
+            resultado *= cn1
+            cn1 -= 1
+        print(f"o fatorial de {n1} é: {resultado}")
+# fatorial(int(input("Digite um nunero: ")))
 
 # 8. Fibonacci até N
 # Peça ao usuário um número N e gere a sequência de Fibonacci até esse número.
@@ -65,6 +74,21 @@ adivinha()
 # 9. Números pares e ímpares separados
 # Peça ao usuário para inserir 10 números e armazene-os separadamente em listas de pares e ímpares. No final, exiba as duas listas.
 
+def par_impar():
+    impar =[]
+    par = []
+    contador = 0
+    while contador != 10:
+            contador += 1
+            n1 = int(input("Digite um numero: "))
+            if n1 % 2 == 0:
+                par +=[n1]
+            else:
+                impar +=[n1]
+        
+    print(f"Os numeros impares estão aqui {impar}\nAqui estão os pares{par}")
+
+# par_impar()
+
 # 10. Criptografia simples
 # Peça ao usuário uma palavra e substitua cada vogal por um caractere *, exibindo a palavra modificada.
-
