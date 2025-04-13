@@ -1,4 +1,4 @@
-classes ={
+classes = {
     "Guerreiro": {
         "name": "Guerreiro",
         "desc": "Focado em combate corpo a corpo. Usa espadas de duas mãos. Alta resistência e defesa.",

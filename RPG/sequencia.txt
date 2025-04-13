@@ -1,0 +1,12 @@
+Cria o personagem
+Spawna no mapa ao qual o personagem pertence
+começa a caminhar com o boneco
+encontrar monstros
+monstros podem ser passivos ou ativos
+se monstro for passivo pergunta ao usuario se quer lutar com ele
+se ativo, entra em batalha automaticamente
+se derrotar o monstro dropa 1 item que poder ser moeda ou item aleatorio
+HP restaura automaticamente
+Exp ganha é contabilizada e mostra seu EXP
+Verifica o que dropou
+

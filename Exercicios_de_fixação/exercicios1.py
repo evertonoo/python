@@ -31,7 +31,16 @@ def eh_primo(n):
 # 2. Palíndromo
 # Peça ao usuário para digitar uma palavra e verifique se ela é um palíndromo (ou seja, se pode ser lida da mesma forma de trás para frente).
 
+def palindromo():
+    palavra = input("Escolha uma palavra: ")
+    palavra = palavra.lower()
+    if palavra == palavra[::-1]:
+        print(f"{palavra} é um palindromo")
+    
+    else:print(f"{palavra} não é um palindromo")
+        
 
+# palindromo()
 
 # 3. Soma de dígitos
 # Crie um programa que recebe um número inteiro positivo e calcula a soma de seus dígitos.
@@ -129,7 +138,7 @@ def fibonacci():
         print(a, end=" ")  # Imprime os valores na mesma linha
         a, b = b, a + b  # Atualiza os valores para o próximo termo
 
-fibonacci()
+#fibonacci()
 
 
 # 9. Números pares e ímpares separados
@@ -156,6 +165,18 @@ def par_impar():
 # 10. Criptografia simples
 # Peça ao usuário uma palavra e substitua cada vogal por um caractere *, exibindo a palavra modificada.
 
+def criptografia_simples(senha):
+    cripto = ""
+    for _ in senha:
+        if _ in "aeiouAEIOU":
+            _ = "*"
+            cripto += _
+        else: cripto += _
+
+    print(cripto)
+        
+# criptografia_simples(input("Digite uma senha: "))
+
 #DESAFIO EXTRA
 # 📌 Desafio: Analisador de Textos para Digitação Rápida
 # Imagine que você trabalha como desenvolvedor em uma empresa de cursos online, 
@@ -172,8 +193,64 @@ def par_impar():
 # Médio: Equilíbrio entre vogais/consoantes e palavras com 5-7 letras.
 # Difícil: Muitas consoantes e palavras longas (média ≥ 8 letras).
 
-def analisador(texto):
-    vogal = "aeiouAEIOU"
+# def extra(texto):
+#     v = 0
+#     c = 0
+#     texto1 = texto.split()
+#     texto = texto.replace(" ","")
+#     #contar vogais
+#     for _ in texto:
+#         if _ in "aeiouAEIOU":
+#             v += 1
+#         else: c += 1
+#     print(f"Existem {v} vogais no seu texto, e {c} consoantes\n{texto1}")
+#     for a in texto1:
+#         if a in "aeiouAEIOU":
+#             print(a)
+
+# extra(input(str("Digite um texto:\n")))
+
+# Solicitar ao usuário um texto
+texto = input("Digite um texto: ").strip()
+
+# Contar vogais e consoantes
+vogais = "aeiouAEIOU"
+qtd_vogais = 0
+qtd_consoantes = 0
+
+for char in texto:
+    if char.isalpha():  # Só letras
+        if char in vogais:
+            qtd_vogais += 1
+        else:
+            qtd_consoantes += 1
+
+# Medir o tamanho médio das palavras
+palavras = texto.split()
+total_letras = sum(len(palavra) for palavra in palavras)
+qtd_palavras = len(palavras)
+
+if qtd_palavras > 0:
+    media_tamanho = total_letras / qtd_palavras
+else:
+    media_tamanho = 0
+
+# Exibir os resultados
+print(f"\nVogais: {qtd_vogais}")
+print(f"Consoantes: {qtd_consoantes}")
+print(f"Tamanho médio das palavras: {media_tamanho:.2f}")
+
+# Índice de dificuldade
+if qtd_vogais > qtd_consoantes and media_tamanho <= 4:
+    dificuldade = "Fácil"
+elif qtd_consoantes > qtd_vogais and media_tamanho >= 8:
+    dificuldade = "Difícil"
+else:
+    dificuldade = "Médio"
+
+print(f"Dificuldade do texto: {dificuldade}")
+
+
 
     
 
