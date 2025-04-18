@@ -1,5 +1,6 @@
 import time
 import random
+
 # 1️⃣ Contagem Progressiva
 # Peça ao usuário um número inteiro positivo n e exiba uma contagem de 1 até n.
 
@@ -28,7 +29,7 @@ def regressiva(n):
     while n >= 0:
         print(n)
         n -= 1
-        
+
 
 # regressiva(int(input("Digite um numero para contarmos até 0: ")))
 
@@ -113,6 +114,15 @@ def par_impar():
 # Cálculo: 5! = 5 × 4 × 3 × 2 × 1 = 120
 # Saída: O fatorial de 5 é 120
 
+def fatorial():
+    n1 = int(input("Digite um numero "))
+    fatorial = n1  
+    while fatorial > 1:
+        fatorial -= 1
+        n1 *= fatorial
+    print(n1)
+
+# fatorial()
 # 8️⃣ Média de Números
 # Peça ao usuário para inserir uma quantidade indefinida de números e calcule a média. O processo deve parar quando o usuário digitar 0.
 
@@ -144,14 +154,30 @@ def impares():
           n1 += 1
           
      print(impar)
-impares()
+# impares()
                
 # 🔟 Sequência de Fibonacci
 # Peça ao usuário um número n e exiba os primeiros n termos da sequência de Fibonacci.
 
 # Exemplo:
 # Entrada: 6
-# Saída: 0 1 1 2 3 5
+# Saída: 0 1 1 2 3 5]
+
+def fibonacci():
+    n = int(input("Digite um numero: "))
+    lista = []
+    fibo = 0
+    n1 = 1
+    n2 = 0
+    while len(lista) < n:
+        lista.append(fibo)
+        n2 = n1
+        n1 = fibo
+        fibo = n1 + n2
+    
+    print(lista)
+# fibonacci()
+         
 
 # 1️⃣1️⃣ Número Invertido
 # Peça um número inteiro positivo ao usuário e exiba esse número invertido.
@@ -169,11 +195,16 @@ impares()
 
 # 1️⃣3️⃣ Potência de um Número
 # Peça ao usuário dois números, base e expoente, e calcule o resultado de base^expoente.
-
 # Exemplo:
 # Entrada: 2 5
 # Cálculo: 2⁵ = 32
 # Saída: O resultado é 32
+def potencia():
+     n1 = int(input("Insira um numero base: "))
+     n2 = int(input("Insira o numero que sera o expoente: "))
+     resultado = n1 ** n2
+     print(" O resultado da conta é", resultado)
+# potencia()
 
 # 1️⃣4️⃣ Divisores de um Número
 # Peça um número ao usuário e exiba todos os seus divisores.
@@ -181,6 +212,17 @@ impares()
 # Exemplo:
 # Entrada: 12
 # Saída: 1, 2, 3, 4, 6, 12
+
+def divisores():
+     n1 = int(input("Digite um numero "))
+     contador = 0
+     lista = []
+     while contador <= n1:
+        contador += 1
+        if n1 % contador == 0:
+            lista.append(contador)
+     print(lista)         
+# divisores()
 
 # 1️⃣5️⃣ Número Perfeito
 # Solicite um número ao usuário e verifique se ele é um número perfeito (um número cuja soma de seus divisores próprios é igual a ele mesmo).
@@ -191,12 +233,37 @@ impares()
 # Soma: 1 + 2 + 3 = 6
 # Saída: 6 é um número perfeito
 
+def perfeito():
+    n1 = int(input("Digite um número: "))
+    contador = n1
+    lista = []
+    while contador > 1:
+         contador -= 1
+         if n1 % contador == 0:
+              lista.append(contador)
+    if sum(lista) == n1:
+         print(f"O {n1} é um numero perfeito")
+    else:
+         print(f"O {n1} não é um numero perfeito")
+# perfeito()
+
 # 1️⃣6️⃣ Contagem de Dígitos
 # Peça um número ao usuário e exiba quantos dígitos ele possui.
 
 # Exemplo:
 # Entrada: 9876
 # Saída: O número 9876 tem 4 dígitos.
+
+def contagem():
+    n1 = input("Digite um número: ")
+    digitos = 0
+    for c in n1:
+         digitos += 1
+    print(f"{n1} Tem um total de {digitos} digito(s)")
+# ou
+    print(f"O {n1} tem {len(n1)} dígito(s)")
+
+# contagem()
 
 # 1️⃣7️⃣ Produto dos Dígitos
 # Solicite um número inteiro positivo e calcule o produto de seus dígitos.
@@ -206,15 +273,40 @@ impares()
 # Cálculo: 1 × 2 × 3 × 4 = 24
 # Saída: O produto dos dígitos é 24
 
+def produto():
+     n = input("Digite uma dezena ou superior: ")
+     n1 = []
+     resultado = 1
+     for _ in n:
+        n1.append(int(_))
+     for num in n1:
+          resultado *= num
+     print(resultado)
+# produto()
+
 # 1️⃣8️⃣ Soma de Números Pares em um Intervalo
 # Peça dois números a e b e calcule a soma de todos os números pares entre eles (inclusive).
 
+def soma_pares():
+     n1 = int(input("insira o 1º numero: "))
+     n1_copy = n1
+     n2 = int(input("Insira o 2º numero: "))
+     lista = []
+     while n1 < n2:
+        n1 += 1
+        if n1 % 2 == 0:
+             lista.append(n1)
+        
+     print(f"a soma dos números pares entre {n1_copy} e {n2} é {sum(lista)}")
+soma_pares()
 # 1️⃣9️⃣ Contagem de Vogais em uma Palavra
 # Peça ao usuário uma palavra e conte quantas vogais (a, e, i, o, u) existem nela.
 
 # Exemplo:
 # Entrada: "programação"
 # Saída: Existem 5 vogais.
+
+
 
 # 2️⃣0️⃣ Quadrado Mágico 3x3
 # Solicite ao usuário 9 números e organize-os em uma matriz 3x3. Depois, verifique se a matriz forma um quadrado mágico (a soma de cada linha, coluna e diagonal deve ser a mesma).
